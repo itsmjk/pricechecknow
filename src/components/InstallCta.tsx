@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Icon, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Icon, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, useDisclosure } from '@chakra-ui/react';
 import { FiDownload, FiSmartphone, FiBookmark } from 'react-icons/fi';
 import { useInstallCta } from '../hooks/useInstallCta';
 import { trackEvent } from '../utils/analytics';

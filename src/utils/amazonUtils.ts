@@ -15,7 +15,7 @@ const resolveShortUrl = async (shortUrl: string): Promise<string> => {
     const response = await axios.post(backendUrl, {
       url: shortUrl
     }, {
-      timeout: 20000,
+      timeout: 30000,
       headers: {
         'Content-Type': 'application/json'
       }

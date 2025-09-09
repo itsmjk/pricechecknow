@@ -255,7 +255,7 @@ app.post('/api/resolve-url', async (req, res) => {
       const keepaKey = process.env.KEEPA_API_KEY;
       if (keepaKey) {
         const keepaUrl = `https://api.keepa.com/product?key=${keepaKey}&domain=1&asin=${asin}&history=0&stats=0`;
-        const keepaResp = await axios.get(keepaUrl, { timeout: 15000 });
+        const keepaResp = await axios.get(keepaUrl, { timeout: 25000 });
         if (!keepaResp.data || !Array.isArray(keepaResp.data.products) || keepaResp.data.products.length === 0) {
           return res.status(400).json({ error: 'Invalid ASIN or product not found on Keepa.', finalUrl: resolvedUrl, asin: asin });
         }
